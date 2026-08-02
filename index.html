@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caffè Andante — café &amp; bar in the backstreets of Thessaloniki</title>
+    <meta
+      name="description"
+      content="Caffè Andante. An old drawing room in the backstreets of Thessaloniki: coffee, all-day brunch, pastries, cocktails and music on vinyl. From 8 in the morning until late."
+    />
+    <meta name="theme-color" content="#0c2422" />
+
+    <!-- Δείγμα / φανταστική επιχείρηση: να μην μπει ποτέ σε μηχανές αναζήτησης. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="el_GR" />
+    <meta property="og:title" content="Caffè Andante — Thessaloniki" />
+    <meta
+      property="og:description"
+      content="Coffee, brunch and drinks in an old drawing room in the backstreets. Time walks here."
+    />
+    <meta property="og:image" content="https://vagtsop.github.io/coffee-site/img/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/img/og.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/img/hero-night.webp" media="(min-width: 769px)" />
+    <link rel="preload" as="image" href="/img/hero-night-sm.webp" media="(max-width: 768px)" />
+
+    <!-- Δομημένα δεδομένα: δείχνουν τι «διαβάζει» η Google για ένα κατάστημα.
+         Σε πραγματικό site μπαίνουν τα αληθινά στοιχεία — και aggregateRating
+         μόνο αν οι κριτικές είναι υπαρκτές. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Caffè Andante",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Olympou 47",
+          "addressLocality": "Thessaloniki",
+          "postalCode": "546 31",
+          "addressCountry": "GR"
+        },
+        "telephone": "+302310000000",
+        "priceRange": "€€",
+        "servesCuisine": ["Coffee", "Brunch", "Pastries", "Cocktails"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "08:00",
+            "closes": "01:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "03:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "01:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- preloader ------------------------------------------------------- -->
+    <div class="preloader" data-preloader>
+      <span class="preloader__mark">Andante</span>
+      <span class="preloader__bar"><span></span></span>
+    </div>
+
+    <div class="cursor" aria-hidden="true"></div>
+
+    <a class="skip" href="#magazi" data-i18n="nav.skip">Skip to content</a>
+
+    <!-- header ---------------------------------------------------------- -->
+    <header class="header">
+      <span class="progress" data-progress aria-hidden="true"></span>
+
+      <!-- διακοσμητική κορδέλα στη δεξιά άκρη του header: σκουραίνει το φόντο
+           κάτω από τα κουμπιά όσο είμαστε πάνω από τη φωτογραφία του hero, και
+           φεύγει μόλις ο επισκέπτης αρχίσει να σκρολάρει -->
+      <svg
+        class="ribbon"
+        viewBox="0 0 480 96"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient id="ribbonFill" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#08201e" stop-opacity="0" />
+            <stop offset="42%" stop-color="#08201e" stop-opacity="0.48" />
+            <stop offset="100%" stop-color="#08201e" stop-opacity="0.92" />
+          </linearGradient>
+        </defs>
+
+        <path
+          class="ribbon__fill"
+          d="M480,0 H0 C120,10 240,50 340,72 C398,85 442,92 480,96 Z"
+          fill="url(#ribbonFill)"
+        />
+        <path
+          class="ribbon__line"
+          d="M0,0 C120,10 240,50 340,72 C398,85 442,92 480,96"
+          fill="none"
+          vector-effect="non-scaling-stroke"
+        />
+        <path
+          class="ribbon__spark"
+          d="M0,0 C120,10 240,50 340,72 C398,85 442,92 480,96"
+          fill="none"
+          vector-effect="non-scaling-stroke"
+        />
+      </svg>
+
+      <div class="header__inner container">
+        <a class="wordmark" href="#top" data-i18n-aria="nav.home" aria-label="Caffè Andante — back to top">
+          <span class="wordmark__neon">Andante</span>
+          <span class="wordmark__sub">Caffè · Θεσσαλονίκη</span>
+        </a>
+
+        <nav class="nav" data-i18n-aria="nav.lang" aria-label="Main navigation">
+          <a href="#magazi" data-i18n="nav.about">The place</a>
+          <a href="#menu" data-i18n="nav.menu">Menu</a>
+          <a href="#xoros" data-i18n="nav.space">The space</a>
+          <a href="#programma" data-i18n="nav.programme">What’s on</a>
+          <a href="#epafi" data-i18n="nav.visit">Find us</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="langs" role="group" data-i18n-aria="nav.lang" aria-label="Language">
+            <button type="button" data-lang="en" class="is-active" aria-pressed="true">EN</button>
+            <button type="button" data-lang="el" aria-pressed="false">ΕΛ</button>
+          </div>
+
+          <span class="status" data-status hidden>
+            <span class="status__dot"></span><span data-status-text></span>
+          </span>
+
+          <a class="btn btn--sm" href="#kratisi"><span data-i18n="nav.book">Book a table</span></a>
+
+          <button
+            class="burger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only" data-i18n="nav.menuToggle">Navigation menu</span>
+            <span aria-hidden="true"></span><span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav>
+        <a href="#magazi"><em>01</em> <span data-i18n="nav.about">The place</span></a>
+        <a href="#menu"><em>02</em> <span data-i18n="nav.menu">Menu</span></a>
+        <a href="#xoros"><em>03</em> <span data-i18n="nav.space">The space</span></a>
+        <a href="#programma"><em>04</em> <span data-i18n="nav.programme">What’s on</span></a>
+        <a href="#kratisi"><em>05</em> <span data-i18n="nav.book">Book a table</span></a>
+        <a href="#epafi"><em>06</em> <span data-i18n="nav.visit">Find us</span></a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <a href="tel:+302310000000">2310 000 000</a>
+        <p>Olympou 47, Thessaloniki</p>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- hero ---------------------------------------------------------- -->
+      <section class="hero">
+        <picture class="hero__bg">
+          <source srcset="/img/hero-night-sm.webp" media="(max-width: 768px)" />
+          <img
+            src="/img/hero-night.webp"
+            data-i18n-alt="hero.alt"
+            alt="Tables in the alley outside Caffè Andante, with the windows lit up at night"
+            fetchpriority="high"
+            data-kenburns
+          />
+        </picture>
+        <span class="hero__veil" aria-hidden="true"></span>
+
+        <div class="container hero__inner">
+          <p class="eyebrow eyebrow--light" data-reveal data-i18n="hero.eyebrow">
+            Café &amp; bar · 47 Olympou
+          </p>
+
+          <h1 class="hero__title">
+            <span class="hero__neon" data-neon>Andante</span>
+          </h1>
+
+          <p class="hero__tagline" data-reveal data-i18n="hero.tagline">Time walks here.</p>
+
+          <p class="hero__lead" data-reveal data-i18n="hero.lead">
+            An old drawing room in the backstreets of Thessaloniki: mosaic floors, Thonet chairs,
+            vinyl playing from the morning, and a wall of clocks that never agree with one another.
+          </p>
+
+          <div class="hero__cta" data-reveal>
+            <a class="btn" href="#kratisi"><span data-i18n="hero.ctaBook">Book a table</span></a>
+            <a class="btn btn--ghost-light" href="#menu"
+              ><span data-i18n="hero.ctaMenu">See the menu</span></a
+            >
+          </div>
+
+          <ul class="hero__meta" data-reveal>
+            <li>
+              <strong data-num="4.8">4.8</strong>
+              <span data-i18n="hero.metaReviews">from 512 guest reviews</span>
+            </li>
+            <li>
+              <strong data-open-label>08:00 – 01:00</strong>
+              <span data-open-sub>open seven days a week</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.metaPedestrian">Pedestrian street</strong>
+              <span data-i18n="hero.metaPedestrianSub">tables outside &amp; two floors</span>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="hero__scroll"
+          href="#magazi"
+          data-i18n-aria="hero.scroll"
+          aria-label="Continue below"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <!-- marquee ------------------------------------------------------- -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span data-i18n="marquee"
+            >Specialty espresso ✻ All-day brunch ✻ Homemade pastries ✻ Cocktails &amp; natural wine
+            ✻ Vinyl every night ✻ Tables on the pedestrian street ✻ Dog friendly ✻</span
+          >
+          <span data-i18n="marquee"
+            >Specialty espresso ✻ All-day brunch ✻ Homemade pastries ✻ Cocktails &amp; natural wine
+            ✻ Vinyl every night ✻ Tables on the pedestrian street ✻ Dog friendly ✻</span
+          >
+        </div>
+      </div>
+
+      <!-- the place ----------------------------------------------------- -->
+      <section class="section story" id="magazi">
+        <div class="container story__grid">
+          <div class="story__copy">
+            <p class="eyebrow" data-reveal data-i18n="story.eyebrow">The place</p>
+            <h2 data-split data-i18n="story.title">No clock in here shows the same time</h2>
+            <p class="lead" data-reveal data-i18n="story.p1">
+              Andante was not designed; it was collected. An interwar apartment with its original
+              mosaic on the floor, Thonet chairs, marble tables and cabinets holding glassware,
+              clocks and the record collection of the house.
+            </p>
+            <p data-reveal data-i18n="story.p2">
+              In the mornings the sun comes through the stained glass and the pedestrian street
+              fills with cups. At night the lights go down, the turntable takes over and coffee
+              turns into negroni. Same room — three completely different hours of the day.
+            </p>
+
+            <ul class="stats" data-reveal>
+              <li>
+                <strong><span data-count="4.8" data-decimals="1">0</span></strong>
+                <span data-i18n="story.stat1">average rating</span>
+              </li>
+              <li>
+                <strong><span data-count="512">0</span></strong>
+                <span data-i18n="story.stat2">guest reviews</span>
+              </li>
+              <li>
+                <strong><span data-count="2">0</span></strong>
+                <span data-i18n="story.stat3">floors of seating</span>
+              </li>
+              <li>
+                <strong><span data-count="7">0</span></strong>
+                <span data-i18n="story.stat4">days a week</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="story__media">
+            <figure class="story__fig story__fig--tall" data-reveal>
+              <img
+                src="/img/window-night.webp"
+                data-i18n-alt="story.alt1"
+                alt="The interior seen from the window one evening"
+                loading="lazy"
+                width="1600"
+                height="2400"
+                data-parallax="-6"
+              />
+            </figure>
+            <figure class="story__fig" data-reveal>
+              <img
+                src="/img/salon.webp"
+                data-i18n-alt="story.alt2"
+                alt="The ground-floor room with Thonet chairs and framed prints"
+                loading="lazy"
+                width="1400"
+                height="937"
+              />
+            </figure>
+            <div class="clockface" data-clock aria-hidden="true">
+              <svg viewBox="0 0 100 100">
+                <circle class="clockface__ring" cx="50" cy="50" r="46" />
+                <g data-clock-ticks></g>
+                <line class="clockface__hand" data-hand="hour" x1="50" y1="50" x2="50" y2="28" />
+                <line class="clockface__hand" data-hand="minute" x1="50" y1="50" x2="50" y2="18" />
+                <line class="clockface__second" data-hand="second" x1="50" y1="56" x2="50" y2="14" />
+                <circle class="clockface__pin" cx="50" cy="50" r="2.4" />
+              </svg>
+              <span class="clockface__label" data-clock-label></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- menu ---------------------------------------------------------- -->
+      <section class="section section--cream menu" id="menu">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <p class="eyebrow" data-reveal data-i18n="menu.eyebrow">The list</p>
+              <h2 data-split data-i18n="menu.title">From the first espresso to the last drink</h2>
+            </div>
+            <p class="lead" data-reveal data-i18n="menu.lead">
+              Specialty coffee, brunch served all day, pastries of the hour and a bar that runs
+              until late.
+            </p>
+          </div>
+
+          <div class="menu__tabs" role="tablist" data-i18n-aria="menu.tabs" aria-label="Menu categories">
+            <button
+              class="tab is-active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-kafes"
+              id="tab-kafes"
+              data-tab="kafes"
+              data-i18n="menu.tab.coffee"
+            >
+              Coffee &amp; drinks
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-brunch"
+              id="tab-brunch"
+              data-tab="brunch"
+              data-i18n="menu.tab.brunch"
+            >
+              Brunch &amp; plates
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-glyka"
+              id="tab-glyka"
+              data-tab="glyka"
+              data-i18n="menu.tab.sweets"
+            >
+              Pastries
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-pota"
+              id="tab-pota"
+              data-tab="pota"
+              data-i18n="menu.tab.bar"
+            >
+              Drinks &amp; cocktails
+            </button>
+          </div>
+
+          <div class="menu__panels">
+            <div
+              class="menu__panel is-active"
+              id="panel-kafes"
+              role="tabpanel"
+              aria-labelledby="tab-kafes"
+              data-panel="kafes"
+            >
+              <ul class="menu__list">
+                <li><span data-i18n="m.espresso">Espresso</span><b data-price="2.00">2.00</b></li>
+                <li><span data-i18n="m.doppio">Espresso doppio</span><b data-price="2.50">2.50</b></li>
+                <li><span data-i18n="m.cappuccino">Cappuccino</span><b data-price="3.20">3.20</b></li>
+                <li>
+                  <span data-i18n="m.freddoEspresso">Freddo espresso</span><b data-price="3.20">3.20</b>
+                </li>
+                <li>
+                  <span data-i18n="m.freddoCappuccino">Freddo cappuccino</span
+                  ><b data-price="3.50">3.50</b>
+                </li>
+                <li><span data-i18n="m.flatWhite">Flat white</span><b data-price="3.50">3.50</b></li>
+              </ul>
+              <ul class="menu__list">
+                <li>
+                  <span data-i18n="m.filter">Filter / V60 of the day</span><b data-price="3.50">3.50</b>
+                </li>
+                <li><span data-i18n="m.greekCoffee">Greek coffee</span><b data-price="2.20">2.20</b></li>
+                <li><span data-i18n="m.chocolate">Hot chocolate</span><b data-price="4.00">4.00</b></li>
+                <li><span data-i18n="m.tea">Tea &amp; infusions</span><b data-price="3.00">3.00</b></li>
+                <li><span data-i18n="m.juice">Fresh juice</span><b data-price="4.00">4.00</b></li>
+                <li>
+                  <span data-i18n="m.lemonade">Homemade lemonade</span><b data-price="3.50">3.50</b>
+                </li>
+              </ul>
+              <figure class="menu__art" data-reveal>
+                <span>
+                  <img
+                    src="/img/espresso.webp"
+                    data-i18n-alt="menu.alt.coffee"
+                    alt="Espresso in a green-rimmed cup on a marble table"
+                    loading="lazy"
+                    width="1100"
+                    height="1650"
+                  />
+                </span>
+                <figcaption data-i18n="menu.cap.coffee">
+                  One blend, two single origins — they change every month.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="menu__panel"
+              id="panel-brunch"
+              role="tabpanel"
+              aria-labelledby="tab-brunch"
+              data-panel="brunch"
+            >
+              <ul class="menu__list">
+                <li>
+                  <span
+                    ><span data-i18n="m.bruschetta">Bruschetta of the day</span
+                    ><em data-i18n="m.bruschetta.sub">cheese, roasted pepper, rocket</em></span
+                  ><b data-price="8.50">8.50</b>
+                </li>
+                <li>
+                  <span
+                    ><span data-i18n="m.benedict">Eggs benedict</span
+                    ><em data-i18n="m.benedict.sub">on sourdough</em></span
+                  ><b data-price="9.50">9.50</b>
+                </li>
+                <li>
+                  <span
+                    ><span data-i18n="m.avocado">Avocado toast</span
+                    ><em data-i18n="m.avocado.sub">with a poached egg</em></span
+                  ><b data-price="8.00">8.00</b>
+                </li>
+                <li>
+                  <span data-i18n="m.omelette">Omelette of the day</span><b data-price="8.00">8.00</b>
+                </li>
+                <li>
+                  <span data-i18n="m.pancakes">Pancakes with seasonal fruit</span
+                  ><b data-price="8.50">8.50</b>
+                </li>
+                <li>
+                  <span data-i18n="m.yoghurt">Yoghurt with granola &amp; honey</span
+                  ><b data-price="6.00">6.00</b>
+                </li>
+              </ul>
+              <ul class="menu__list">
+                <li>
+                  <span
+                    ><span data-i18n="m.salad">Seasonal salad</span
+                    ><em data-i18n="m.salad.sub">vegetarian</em></span
+                  ><b data-price="8.50">8.50</b>
+                </li>
+                <li><span data-i18n="m.club">Club sandwich</span><b data-price="9.00">9.00</b></li>
+                <li>
+                  <span data-i18n="m.toastie">Toastie with turkey &amp; graviera</span
+                  ><b data-price="4.50">4.50</b>
+                </li>
+                <li>
+                  <span data-i18n="m.platter">Charcuterie &amp; cheese platter</span
+                  ><b data-price="12.00">12.00</b>
+                </li>
+                <li><span data-i18n="m.soup">Soup of the day</span><b data-price="6.50">6.50</b></li>
+                <li>
+                  <span
+                    ><span data-i18n="m.bread">Sourdough bread</span
+                    ><em data-i18n="m.bread.sub">with butter &amp; jam</em></span
+                  ><b data-price="4.00">4.00</b>
+                </li>
+              </ul>
+              <figure class="menu__art" data-reveal>
+                <span>
+                  <img
+                    src="/img/toast.webp"
+                    data-i18n-alt="menu.alt.brunch"
+                    alt="A slice of sourdough with fruit, honey and micro greens"
+                    loading="lazy"
+                    width="1100"
+                    height="1650"
+                  />
+                </span>
+                <figcaption data-i18n="menu.cap.brunch">
+                  Brunch is served all day — including Sundays at six.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="menu__panel"
+              id="panel-glyka"
+              role="tabpanel"
+              aria-labelledby="tab-glyka"
+              data-panel="glyka"
+            >
+              <ul class="menu__list">
+                <li>
+                  <span data-i18n="m.cheesecake">Lemon cheesecake</span><b data-price="5.50">5.50</b>
+                </li>
+                <li>
+                  <span data-i18n="m.chocolatePie">Chocolate pie</span><b data-price="5.50">5.50</b>
+                </li>
+                <li>
+                  <span data-i18n="m.walnutCake">Walnut cake with ice cream</span
+                  ><b data-price="6.00">6.00</b>
+                </li>
+                <li>
+                  <span data-i18n="m.millefeuille">Mille-feuille</span><b data-price="6.00">6.00</b>
+                </li>
+                <li>
+                  <span data-i18n="m.orangePie">Orange filo pie</span><b data-price="5.50">5.50</b>
+                </li>
+              </ul>
+              <ul class="menu__list">
+                <li><span data-i18n="m.profiterole">Profiterole</span><b data-price="6.00">6.00</b></li>
+                <li><span data-i18n="m.tiramisu">Tiramisù</span><b data-price="6.00">6.00</b></li>
+                <li><span data-i18n="m.banoffee">Banoffee</span><b data-price="6.00">6.00</b></li>
+                <li>
+                  <span data-i18n="m.mousse">Chocolate mousse</span><b data-price="5.50">5.50</b>
+                </li>
+                <li>
+                  <span data-i18n="m.iceCream">Ice cream per scoop</span><b data-price="2.50">2.50</b>
+                </li>
+              </ul>
+              <figure class="menu__art" data-reveal>
+                <span>
+                  <img
+                    src="/img/dessert.webp"
+                    data-i18n-alt="menu.alt.sweets"
+                    alt="A dessert plate with strawberries and macarons beside a cup of coffee"
+                    loading="lazy"
+                    width="1100"
+                    height="1650"
+                  />
+                </span>
+                <figcaption data-i18n="menu.cap.sweets">
+                  Whatever was made this morning — until it runs out.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="menu__panel"
+              id="panel-pota"
+              role="tabpanel"
+              aria-labelledby="tab-pota"
+              data-panel="pota"
+            >
+              <ul class="menu__list">
+                <li><span data-i18n="m.negroni">Negroni</span><b data-price="9.00">9.00</b></li>
+                <li>
+                  <span data-i18n="m.espressoMartini">Espresso martini</span
+                  ><b data-price="9.50">9.50</b>
+                </li>
+                <li><span data-i18n="m.ginTonic">Gin &amp; tonic</span><b data-price="9.00">9.00</b></li>
+                <li><span data-i18n="m.aperol">Aperol spritz</span><b data-price="8.00">8.00</b></li>
+                <li>
+                  <span data-i18n="m.oldFashioned">Old fashioned</span><b data-price="9.50">9.50</b>
+                </li>
+                <li><span data-i18n="m.margarita">Margarita</span><b data-price="9.00">9.00</b></li>
+              </ul>
+              <ul class="menu__list">
+                <li><span data-i18n="m.draught">Draught beer</span><b data-price="5.00">5.00</b></li>
+                <li>
+                  <span
+                    ><span data-i18n="m.wineGlass">Wine by the glass</span
+                    ><em data-i18n="m.wineGlass.sub">natural, from small growers</em></span
+                  ><b data-price="5.00">5.00</b>
+                </li>
+                <li>
+                  <span data-i18n="m.wineBottle">Wine by the bottle</span><b data-price="24.00">24.00</b>
+                </li>
+                <li><span data-i18n="m.ouzo">Ouzo / tsipouro</span><b data-price="4.50">4.50</b></li>
+                <li><span data-i18n="m.spirit">House spirit</span><b data-price="8.00">8.00</b></li>
+                <li>
+                  <span data-i18n="m.soft">Soft drinks &amp; water</span><b data-price="3.00">3.00</b>
+                </li>
+              </ul>
+              <figure class="menu__art" data-reveal>
+                <span>
+                  <img
+                    src="/img/negroni.webp"
+                    data-i18n-alt="menu.alt.bar"
+                    alt="A negroni on a marble counter"
+                    loading="lazy"
+                    width="1100"
+                    height="1650"
+                  />
+                </span>
+                <figcaption data-i18n="menu.cap.bar">
+                  The bar opens at six. The turntable, at nine.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <p class="menu__note" data-reveal data-i18n="menu.note">
+            Indicative menu. Available options and prices are confirmed in the shop.
+          </p>
+        </div>
+      </section>
+
+      <!-- the space ----------------------------------------------------- -->
+      <section class="section section--dark space" id="xoros">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <p class="eyebrow eyebrow--light" data-reveal data-i18n="space.eyebrow">The space</p>
+              <h2 data-split data-i18n="space.title">Two floors, one collection, no hurry</h2>
+            </div>
+            <p class="lead" data-reveal data-i18n="space.lead">
+              Downstairs the room with the mosaics and the cabinets. Upstairs the mezzanine with the
+              marble corner that looks onto the street. Outside, the pedestrian street.
+            </p>
+          </div>
+
+          <div class="gallery">
+            <button class="shot shot--wide" data-lightbox data-full="/img/salon.webp">
+              <img
+                src="/img/salon.webp"
+                data-i18n-alt="story.alt2"
+                alt="The ground-floor room with Thonet chairs"
+                loading="lazy"
+                width="1400"
+                height="937"
+              />
+              <span class="shot__tag" data-i18n="space.tag1">The room</span>
+            </button>
+            <button class="shot" data-lightbox data-full="/img/lace.webp">
+              <img
+                src="/img/lace.webp"
+                data-i18n-alt="space.alt2"
+                alt="An old glass door with lace curtains and plants"
+                loading="lazy"
+                width="1100"
+                height="1288"
+              />
+              <span class="shot__tag" data-i18n="space.tag2">The glass door</span>
+            </button>
+            <button class="shot" data-lightbox data-full="/img/booth.webp">
+              <img
+                src="/img/booth.webp"
+                data-i18n-alt="space.alt3"
+                alt="A striped banquette and wooden table in a corner of the room"
+                loading="lazy"
+                width="1100"
+                height="1650"
+              />
+              <span class="shot__tag" data-i18n="space.tag3">The corner</span>
+            </button>
+            <button class="shot" data-lightbox data-full="/img/terrace.webp">
+              <img
+                src="/img/terrace.webp"
+                data-i18n-alt="space.alt4"
+                alt="Bistro tables and chairs on the cobblestones"
+                loading="lazy"
+                width="1100"
+                height="733"
+              />
+              <span class="shot__tag" data-i18n="space.tag4">The street</span>
+            </button>
+            <button class="shot shot--wide" data-lightbox data-full="/img/lamp-table.webp">
+              <img
+                src="/img/lamp-table.webp"
+                data-i18n-alt="space.alt5"
+                alt="A table by the window with a floor lamp, at night"
+                loading="lazy"
+                width="1400"
+                height="906"
+              />
+              <span class="shot__tag" data-i18n="space.tag5">The window</span>
+            </button>
+            <button class="shot" data-lightbox data-full="/img/chairs.webp">
+              <img
+                src="/img/chairs.webp"
+                data-i18n-alt="space.alt6"
+                alt="Thonet chairs in warm afternoon light"
+                loading="lazy"
+                width="1400"
+                height="787"
+              />
+              <span class="shot__tag" data-i18n="space.tag6">The chairs</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- what's on ----------------------------------------------------- -->
+      <section class="section programme" id="programma">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <p class="eyebrow" data-reveal data-i18n="prog.eyebrow">Our week</p>
+              <h2 data-split data-i18n="prog.title">What’s on, and when</h2>
+            </div>
+            <p class="lead" data-reveal data-i18n="prog.lead">
+              No ticket and no booking for the music — only for a table, if you are a group.
+            </p>
+          </div>
+
+          <ul class="events">
+            <li class="event" data-reveal data-event-day="2">
+              <span class="event__day" data-i18n="prog.tue">Tuesday</span>
+              <div class="event__body">
+                <h3 data-i18n="prog.vinyl">Vinyl night</h3>
+                <p data-i18n="prog.vinyl.sub">
+                  Soul, bossa and whatever the record shelf turns up.
+                </p>
+              </div>
+              <span class="event__time">21:00</span>
+            </li>
+            <li class="event" data-reveal data-event-day="4">
+              <span class="event__day" data-i18n="prog.thu">Thursday</span>
+              <div class="event__body">
+                <h3 data-i18n="prog.jazz">Live jazz trio</h3>
+                <p data-i18n="prog.jazz.sub">Piano, double bass, drums. Two sets, no cover charge.</p>
+              </div>
+              <span class="event__time">21:30</span>
+            </li>
+            <li class="event" data-reveal data-event-day="5">
+              <span class="event__day" data-i18n="prog.fri">Friday</span>
+              <div class="event__body">
+                <h3 data-i18n="prog.dj">DJ set — disco &amp; funk</h3>
+                <p data-i18n="prog.dj.sub">The bar runs until three.</p>
+              </div>
+              <span class="event__time">22:00</span>
+            </li>
+            <li class="event" data-reveal data-event-day="0">
+              <span class="event__day" data-i18n="prog.sun">Sunday</span>
+              <div class="event__body">
+                <h3 data-i18n="prog.brunch">All-day brunch</h3>
+                <p data-i18n="prog.brunch.sub">
+                  Sourdough, eggs, and newspapers nobody picks up.
+                </p>
+              </div>
+              <span class="event__time">09:00 – 17:00</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- reviews ------------------------------------------------------- -->
+      <section class="section rating">
+        <div class="container rating__grid">
+          <div class="rating__score" data-reveal>
+            <strong data-num="4.8">4.8</strong>
+            <div
+              class="rating__stars"
+              role="img"
+              data-i18n-aria="rating.aria"
+              aria-label="4.8 out of 5 stars"
+            >
+              <span style="--fill: 100%"></span><span style="--fill: 100%"></span
+              ><span style="--fill: 100%"></span><span style="--fill: 100%"></span
+              ><span style="--fill: 80%"></span>
+            </div>
+            <p data-i18n="rating.count">from 512 guest reviews</p>
+
+            <ul class="chips">
+              <li data-i18n="chip.outdoor">Tables outside</li>
+              <li data-i18n="chip.floors">Two floors</li>
+              <li data-i18n="chip.live">Live music</li>
+              <li data-i18n="chip.brunch">Brunch</li>
+              <li data-i18n="chip.veg">Vegetarian options</li>
+              <li data-i18n="chip.takeaway">Takeaway</li>
+              <li data-i18n="chip.dogs">Dog friendly</li>
+              <li data-i18n="chip.access">Accessible entrance</li>
+              <li data-i18n="chip.cards">Cards &amp; contactless</li>
+            </ul>
+          </div>
+
+          <div class="quotes" data-reveal>
+            <blockquote class="quote is-active">
+              <p data-i18n="quote1">
+                I came in for one espresso and left three hours later. Blame the sofa by the window.
+              </p>
+              <cite>Maria K.</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <p data-i18n="quote2">
+                The best flat white in the centre, and the only kitchen that will serve you brunch
+                at six in the afternoon without giving you a look.
+              </p>
+              <cite>Stelios P.</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <p data-i18n="quote3">
+                I went for the jazz and stayed for the negroni. Nobody is in a hurry in here — not
+                even the clocks on the wall.
+              </p>
+              <cite>Natalia V.</cite>
+            </blockquote>
+
+            <div class="quotes__nav">
+              <button class="dot is-active" type="button" data-i18n-aria="quote.nav1" aria-label="Review 1"></button>
+              <button class="dot" type="button" data-i18n-aria="quote.nav2" aria-label="Review 2"></button>
+              <button class="dot" type="button" data-i18n-aria="quote.nav3" aria-label="Review 3"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- booking ------------------------------------------------------- -->
+      <section class="section booking" id="kratisi">
+        <div class="container booking__grid">
+          <div class="booking__copy">
+            <p class="eyebrow" data-reveal data-i18n="book.eyebrow">Booking</p>
+            <h2 data-split data-i18n="book.title">Book a table in half a minute</h2>
+            <p class="lead" data-reveal data-i18n="book.lead">
+              For groups of more than four and for the evenings with music, better to let us know in
+              advance. We will call you to confirm.
+            </p>
+            <ul class="booking__facts" data-reveal>
+              <li>
+                <strong data-i18n="book.phone">Phone</strong
+                ><a href="tel:+302310000000">2310 000 000</a>
+              </li>
+              <li>
+                <strong data-i18n="book.email">Email</strong
+                ><a href="mailto:hello@caffeandante.gr">hello@caffeandante.gr</a>
+              </li>
+              <li>
+                <strong data-i18n="book.groups">Large groups</strong
+                ><span data-i18n="book.groups.value">up to 20 on the mezzanine</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="booking__form" data-booking novalidate data-reveal>
+            <div class="field field--half">
+              <label for="b-name" data-i18n="book.name">Name</label>
+              <input id="b-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field field--half">
+              <label for="b-phone" data-i18n="book.phoneField">Phone</label>
+              <input id="b-phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field">
+              <label for="b-date" data-i18n="book.date">Date</label>
+              <input id="b-date" name="date" type="date" required />
+            </div>
+            <div class="field">
+              <label for="b-time" data-i18n="book.time">Time</label>
+              <input id="b-time" name="time" type="time" value="21:00" required />
+            </div>
+            <div class="field">
+              <label for="b-people" data-i18n="book.people">People</label>
+              <select id="b-people" name="people">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option data-i18n="book.people.more">7 or more</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="b-note"
+                ><span data-i18n="book.note">Note</span>
+                <em data-i18n="book.note.optional">(optional)</em></label
+              >
+              <textarea id="b-note" name="note" rows="3"></textarea>
+            </div>
+
+            <div class="field field--full booking__submit">
+              <button class="btn" type="submit"><span data-i18n="book.submit">Send request</span></button>
+              <p class="booking__msg" data-booking-msg role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- where & when -------------------------------------------------- -->
+      <section class="section section--cream visit" id="epafi">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow" data-reveal data-i18n="visit.eyebrow">Where &amp; when</p>
+            <h2 data-split data-i18n="visit.title">
+              47 Olympou, in the backstreets of the Upper Town
+            </h2>
+          </div>
+
+          <div class="visit__grid">
+            <div class="visit__card" data-reveal>
+              <h3 data-i18n="visit.hours">Opening hours</h3>
+              <ul class="hours" data-hours>
+                <li data-day="1"><span data-i18n="day.1">Monday</span><b>08:00 – 01:00</b></li>
+                <li data-day="2"><span data-i18n="day.2">Tuesday</span><b>08:00 – 01:00</b></li>
+                <li data-day="3"><span data-i18n="day.3">Wednesday</span><b>08:00 – 01:00</b></li>
+                <li data-day="4"><span data-i18n="day.4">Thursday</span><b>08:00 – 01:00</b></li>
+                <li data-day="5"><span data-i18n="day.5">Friday</span><b>08:00 – 03:00</b></li>
+                <li data-day="6"><span data-i18n="day.6">Saturday</span><b>08:00 – 03:00</b></li>
+                <li data-day="0"><span data-i18n="day.0">Sunday</span><b>09:00 – 01:00</b></li>
+              </ul>
+              <p class="visit__status" data-status-long></p>
+            </div>
+
+            <div class="visit__card" data-reveal>
+              <h3 data-i18n="visit.contact">Contact</h3>
+              <dl class="contact">
+                <dt data-i18n="visit.address">Address</dt>
+                <dd data-i18n-html="visit.addressValue">47 Olympou<br />Thessaloniki 546 31</dd>
+                <dt data-i18n="visit.phone">Phone</dt>
+                <dd><a href="tel:+302310000000">2310 000 000</a></dd>
+                <dt data-i18n="visit.service">Service</dt>
+                <dd data-i18n-html="visit.serviceValue">Dine-in &amp; takeaway<br />(no delivery)</dd>
+              </dl>
+              <div class="visit__cta">
+                <a class="btn" href="#kratisi"><span data-i18n="nav.book">Book a table</span></a>
+                <a class="btn btn--ghost" href="tel:+302310000000"
+                  ><span data-i18n="visit.call">Call us</span></a
+                >
+              </div>
+            </div>
+
+            <div class="visit__map" data-reveal>
+              <iframe
+                data-i18n-title="visit.map"
+                title="Map — the area around Olympou street, Thessaloniki"
+                src="https://www.google.com/maps?q=40.6395,22.9475&hl=en&z=16&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer ---------------------------------------------------------- -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <span class="wordmark__neon wordmark__neon--lg">Andante</span>
+          <p data-i18n-html="footer.blurb">
+            Café &amp; bar in the backstreets of Thessaloniki.<br />
+            Time walks here.
+          </p>
+        </div>
+        <nav data-i18n-aria="footer.nav" aria-label="Footer navigation">
+          <a href="#magazi" data-i18n="nav.about">The place</a>
+          <a href="#menu" data-i18n="nav.menu">Menu</a>
+          <a href="#xoros" data-i18n="nav.space">The space</a>
+          <a href="#programma" data-i18n="nav.programme">What’s on</a>
+          <a href="#kratisi" data-i18n="nav.book">Book a table</a>
+        </nav>
+        <address>
+          Olympou 47<br />
+          Thessaloniki 546 31<br />
+          <a href="tel:+302310000000">2310 000 000</a><br />
+          <a href="mailto:hello@caffeandante.gr">hello@caffeandante.gr</a>
+        </address>
+      </div>
+
+      <div class="container">
+        <p class="footer__demo">
+          <strong data-i18n="footer.demoLabel">Sample website.</strong>
+          <span data-i18n="footer.demo"
+            >“Caffè Andante” is a fictional business. The address, phone number, prices, reviews and
+            programme are indicative and do not correspond to any real establishment. Photography:
+            Unsplash.</span
+          >
+        </p>
+      </div>
+
+      <div class="container footer__base">
+        <p data-copy>© 2026 Caffè Andante — demo</p>
+        <p data-i18n="footer.credit">Design &amp; build: your studio</p>
+      </div>
+    </footer>
+
+    <!-- σταθερή μπάρα ενεργειών σε κινητό -------------------------------- -->
+    <div class="quickbar">
+      <a href="tel:+302310000000" data-i18n="qb.call">Call</a>
+      <a href="#menu" data-i18n="qb.menu">Menu</a>
+      <a href="#kratisi" data-i18n="qb.book">Book</a>
+    </div>
+
+    <button
+      class="to-top"
+      data-to-top
+      type="button"
+      data-i18n-aria="a11y.toTop"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+
+    <!-- lightbox -------------------------------------------------------- -->
+    <div class="lightbox" data-lightbox-modal aria-hidden="true" role="dialog" aria-modal="true">
+      <button
+        class="lightbox__close"
+        data-lightbox-close
+        type="button"
+        data-i18n-aria="a11y.close"
+        aria-label="Close"
+      >
+        ✕
+      </button>
+      <img alt="" data-lightbox-img />
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

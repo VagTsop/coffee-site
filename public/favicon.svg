@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#08201e" />
+  <text
+    x="32"
+    y="45"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-size="42"
+    fill="#eef1ff"
+    style="filter: drop-shadow(0 0 4px #93a0ff) drop-shadow(0 0 9px #4a5cff)"
+  >P</text>
+</svg>
