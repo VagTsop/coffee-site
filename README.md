@@ -1,7 +1,6 @@
-# Caffè Andante — bilingual café landing page
+# Caffè Andante — café landing page
 
-A one-page site for a neighbourhood café, built as a **sample** to show local business owners
-what their own site could look like.
+A one-page site for a neighbourhood café, built as a **sample**.
 
 **Live:** https://vagtsop.github.io/coffee-site/
 
@@ -9,13 +8,6 @@ what their own site could look like.
 > reviews and weekly programme are all invented. No detail, photograph or logo belonging to a real
 > establishment is used anywhere in this repository. The page carries `noindex, nofollow` and says
 > so in its own footer.
-
-## Why a fictional brand
-
-A demo built on a specific real shop creates three problems at once: copyright on the photographs
-(they belong to the photographer or to the visitors who uploaded them), the business name and
-trade dress, and a page that looks official while it isn't. A fictional brand demonstrates exactly
-the same work with none of that.
 
 ## Stack
 
@@ -105,13 +97,3 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with
 The base path matters: Vite rewrites `src`, `srcset` and `href` automatically, but custom
 attributes do not get it for free. The lightbox reads `data-full`, so `src/main.js` prefixes it
 with `import.meta.env.BASE_URL` at runtime.
-
-## If you adapt this for a real client
-
-1. Name, address, phone, email and hours — `index.html`, `HOURS` in `src/main.js`, and the JSON-LD.
-2. Replace the photographs in `raw/`, update `scripts/prepare-images.mjs`, run `npm run images`.
-3. Put in the real menu and real prices.
-4. Remove the `noindex` meta tag and the sample notice in the footer.
-5. Wire the booking form to a real endpoint — and add a privacy notice for the data it collects.
-6. Add `aggregateRating` to the JSON-LD **only** if the reviews are genuine; structured data with
-   invented reviews violates Google's guidelines.
